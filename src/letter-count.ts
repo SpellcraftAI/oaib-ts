@@ -8,9 +8,31 @@ const rand36 = (n: number) => {
 }
 
 const randomStrings = 
-  Array
-    .from({ length: 50 }, (_, i) => Array.from({ length: 10 }, () => rand36((i + 1))))
-    .flat()
+  // Larger lengths
+  [
+    60,
+    70,
+    80,
+    90,
+    100,
+    120,
+    140,
+    150,
+    200,
+    250,
+    300,
+    400,
+    500,
+    600,
+    800,
+    1000
+  ]
+    // 10 copies of each length
+    .flatMap((n) => Array.from({ length: 10 }, () => n))
+    // Add 10% variance
+    .flatMap((n) => n * (1 + Math.random() * 0.1))
+    // Generate random strings of that length
+    .map(rand36)
 
     
 const conversations: BatchItem[] = randomStrings.map((string) => ({
