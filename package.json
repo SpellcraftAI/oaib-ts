@@ -26,5 +26,6 @@
     "chalk": "^5.5.0",
     "ora": "^8.2.0",
     "zod": "^4.0.17"
-  }
+  },
+  "homepage": "https://github.com/SpellcraftAI/oaib-ts"
 }
