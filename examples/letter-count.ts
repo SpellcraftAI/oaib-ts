@@ -1,5 +1,5 @@
 import { openai } from "@ai-sdk/openai"
-import { batch, type BatchItem } from "."
+import { batch, type BatchItem } from ".."
 
 const rand36 = (n: number) => {
   let s = ""
