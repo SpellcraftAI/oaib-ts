@@ -38,7 +38,14 @@ const randomStrings =
 const conversations: BatchItem[] = randomStrings.map((string) => ({
   data: { solution: string.length },
   messages: [
-    { role: "user", content: `Count the number of characters in the following string. Wrap answer with count tags: <count>{answer}</count>.\n${string}` }
+    { 
+      role: "user", 
+      content: 
+`Count the number of characters in the following string.
+Wrap answer with count tags: <count>{answer}</count>.
+
+<string>${string}</string>` 
+    }
   ]
 }))
 
